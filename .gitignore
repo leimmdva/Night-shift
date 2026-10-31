@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+
+# .kiro must NOT be ignored — required by Kiroween rules
