@@ -1,4 +1,5 @@
 import Phaser from 'phaser'
+import nullGhost from '../../bugs/01-null-ghost'
 
 /**
  * OfficeScene — the main 2D top-down office.
@@ -44,9 +45,9 @@ export class OfficeScene extends Phaser.Scene {
       right: this.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.D),
     }
 
-    // Temp: press E to open laptop
+    // Temp: press E to open laptop with first bug pack
     this.input.keyboard!.addKey('E').on('down', () => {
-      this.scene.launch('LaptopScene')
+      this.scene.launch('LaptopScene', { pack: nullGhost })
       this.scene.pause()
     })
 
